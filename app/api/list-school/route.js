@@ -97,7 +97,7 @@ export async function GET(){
   try {
     await connectionToDB()
 
-    const listing = await School.find()
+    const listing = await School.find({ _id: -1 })
 
     if (listing.length === 0) {
       return NextResponse.json(
