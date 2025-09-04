@@ -33,7 +33,10 @@ export default function Home() {
               Fill in the school details using our easy-to-use form and add your institution 
               to the SchoolBoard directory.
             </p>
-            <Link href='/school-listing' className="mt-4">Add School →</Link>
+            <Link href='/school-listing' passHref>
+              <Button variant="default" className="mt-4">Add School →</Button>
+            </Link>
+
           </CardContent>
         </Card>
 
@@ -45,7 +48,10 @@ export default function Home() {
               Browse the listed schools and view their details to find the right institution 
               for your needs.
             </p>
-            <Link href='/school-card' className="mt-4">View Schools →</Link>
+            <Link href='/school-listing' passHref>
+              <Button variant="default" className="mt-4">View School →</Button>
+            </Link>
+
           </CardContent>
         </Card>
       </section>
